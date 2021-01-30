@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style> 
+#after-booking{ 
+    display: none;
+}
+
+</style>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+        <div class="booking-form" id="before-booking">
+            <h3>Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input id="flying-form" class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input id="flying-to" class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                    <input id="departureDate" class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input id="returnDate" class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input class="inp-style inp-width" type="number" name=""  id="first-class-input">
+                </div>
+                <div class="plus-minus-btn">
+                     <p><span class="Sign" id="first-increament">+</span> <span class="Sign" id="first-decreament">-</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input class="inp-style inp-width" type="number" name="" id="economy-class-input">
+                </div>
+                <div class="plus-minus-btn">
+                    <p><span id="economy-increament" class="Sign">+</span> <span class="Sign"
+                            id="economy-decreament">-</span></p>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p>$<span id="sub-total">0</span></p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                    <p>$<span id="tax">0</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                       <p>$<span id="total-price">0</span> </p>
+                    </div>
+                </div>
+            </div>
+            <button id="bookingBtn" class="btn-style">Book Now</button>
+        </div>
+
+
+
+
+ <div class="booking-form" id="after-booking">
+            <h3 style="text-align: center">Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From :  .......................................</label>
+                <span id="recipt-flying-form" ></span>
+            </div>
+            <div class="input-group">
+                <label for="">Flying To : ..........................................</label>
+                <span id="recipt-flying-to"><span>
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure:</label>
+                    <p id="recipt-departureDate"></p>
+                </div>
+                <div class="input-group">
+                    <label for="">Return:</label>
+                    <p id="recipt-returnDate"></p>
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <p id="recipt-first-class-input">:...................</p>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100):......................</label>
+                       <p id="recipt-economy-class-input"></p>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal: ......................</p>
+                    </div>
+                    <div class="right">
+                        <p id="recipt-sub-total">$0</p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT :...............</p>
+                    </div>
+                    <div class="right">
+                        <p id="recipt-tax">$0</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total :.......................</h4>
+                    </div>
+                    <div class="right">
+                        <p id="recipt-total">$0</p>
+                    </div>
+                </div>
+            </div>
+            <button  class="btn-style">Download receipt</button>
+        </div>
+    </div>
+        <div class="booking-content">
+            <h1>discover <br> around the world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Thank You-->
+
+    <script>
+
+
+
+
+
+
+        //getting values from input 
+        document.getElementById("first-class-input").addEventListener("input", function () {
+        setInputValues();
+        });
+
+        document.getElementById("economy-class-input").addEventListener("input", function () {
+           setInputValues();
+        });
+
+        //increament and decrement 
+        const firstIncreamentNumber = document.getElementById("first-increament");
+        firstIncreamentNumber.addEventListener("click", function () { increament("first-class-input", 150); });
+
+        const economyIncreamentNumber = document.getElementById("economy-increament");
+       economyIncreamentNumber.addEventListener("click", function () { increament("economy-class-input", 100); })
+
+        const firstDecreamentNumber = document.getElementById("first-decreament");
+        firstDecreamentNumber.addEventListener("click", function () { decreament("first-class-input", 150); });
+
+        const economyDecreamentNumber = document.getElementById("economy-decreament");
+        economyDecreamentNumber.addEventListener("click", function () { decreament("economy-class-input", 100); })
+
+        // when plus sign is cliked function will call  
+        function increament(InputNumber, price) {
+            var incrementValue = takeInputValue(InputNumber);
+            incrementValue++;
+            document.getElementById(InputNumber).value = incrementValue;
+            setInputValues();
+
+        }
+
+        // when -  sign is clicked
+        function decreament(InputNumber, price) {
+            decrementValue = takeInputValue(InputNumber);
+            decrementValue--;
+            if (decrementValue < 0) {
+                return;
+            }
+            document.getElementById(InputNumber).value = decrementValue;
+            setInputValues();
+
+        }
+
+        //define function for  values in subtotal, vat and Total 
+        function setInputValues() {
+           
+            var firstcurrentNumber = takeInputValue("first-class-input");
+            var economyCurrentNumber = takeInputValue("economy-class-input");
+            const subTotal = (firstcurrentNumber * 150) + (economyCurrentNumber * 100);
+
+            document.getElementById("sub-total").innerText = subTotal;
+
+            //calculating vat an Setting it
+            const tax = subTotal * .10;
+            document.getElementById("tax").innerText = tax;
+
+            //Calculating Total and Setting it
+            const total = subTotal + tax;
+            document.getElementById("total-price").innerText = total;
+        }
+
+        //function that  returns values from input 
+        function takeInputValue(takeInput) {
+            const currentNumber = document.getElementById(takeInput).value;
+            if (currentNumber == "") {
+                return 0;
+            }
+
+            const number = parseInt(currentNumber);
+            if (number < 0) {
+                return 0;
+            }
+
+            return number;
+        }
+
+        //out put show in other div initial it is display none after btn clik will show this as a  downloadable recipt 
+        document.getElementById("bookingBtn").addEventListener("click", function () {
+              document.getElementById('before-booking').style.display="none";
+              var f=document.getElementById('after-booking');
+              f.style.display="block";
+              f.style.backgroundColor="white";
+              f.style.color="black";
+              f.style.padding="20px";
+
+
+
+              const peakingPlace=document.getElementById('flying-form').value;
+               document.getElementById('recipt-flying-form').innerText=peakingPlace;
+              const destinationPlace=document.getElementById('flying-to').value;
+              document.getElementById('recipt-flying-to').innerText=destinationPlace;
+              const departureDate =document.getElementById('departureDate').value;
+              document.getElementById('recipt-departureDate').innerText=departureDate;
+              const returnDate=document.getElementById('returnDate').value;
+              document.getElementById('recipt-returnDate').innerText=returnDate;
+
+
+
+            var firstinput = takeInputValue("first-class-input");
+            var secondinput = takeInputValue("economy-class-input");
+            firstinput=parseInt(firstinput);
+            secondinput =parseInt(secondinput)
+            const subTotal =(firstinput*150+secondinput*100);
+            const tax= subTotal*0.10;
+            const total= subTotal+tax;
+           
+            
+            console.log(firstinput,secondinput,subTotal,tax.total);
+            
+       
+            document.getElementById("recipt-first-class-input").innerText =firstinput+"*$150";
+            document.getElementById("recipt-economy-class-input").innerText =secondinput+"*$100";
+            document.getElementById("recipt-sub-total").innerText =subTotal;
+            document.getElementById("recipt-tax").innerText = tax;
+            document.getElementById("recipt-total").innerText = total ;
+
+
+        })
+    </script>
+</body>
+
+</html>
